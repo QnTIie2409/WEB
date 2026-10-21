@@ -7,6 +7,7 @@
   font-family: "Product-Sans-Regular", Arial, sans-serif;
   position: relative; /* làm mốc cho ảnh absolute */
   min-height: 100vh;
+  height: 2000px;
   padding: 140px 60px 60px; /* chừa chỗ cho navbar */
   overflow: hidden; /* phần tràn bị cắt */
   animation: vaotrang 0.8s ease; /* hiệu ứng vào trang */
@@ -50,4 +51,10 @@
     transform: rotate(0) scale(1);
     opacity: 1;
   }
+}
+.Up-icon {
+  position: absolute;
+  height: 50px;
+  left: 1800px;
+  cursor: pointer;
 }
