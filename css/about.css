@@ -1,0 +1,53 @@
+/* =====================================================
+   about.css - RIÊNG cho trang About me (about.html)
+   ===================================================== */
+
+/* ===== 1. KHUNG TRANG ===== */
+.about {
+  font-family: "Product-Sans-Regular", Arial, sans-serif;
+  position: relative; /* làm mốc cho ảnh absolute */
+  min-height: 100vh;
+  padding: 140px 60px 60px; /* chừa chỗ cho navbar */
+  overflow: hidden; /* phần tràn bị cắt */
+  animation: vaotrang 0.8s ease; /* hiệu ứng vào trang */
+}
+
+.section-title {
+  font-family: "EverPlay", Arial, sans-serif;
+  font-size: 40px;
+  margin: 0 0 40px;
+}
+
+/* ===== 2. ẢNH VÀ CHỮ ===== */
+.about-content {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-photo {
+  position: absolute;
+  left: 60px;
+  top: 180px;
+  width: 350px;
+  border: 3px solid #1b1b1b;
+  border-radius: 20px;
+}
+
+.about-info {
+  flex: 1;
+  margin-left: 420px; /* 350px ảnh + 70px khoảng cách */
+  font-size: 20px;
+}
+
+/* ===== 3. ANIMATION VÀO TRANG ===== */
+@keyframes vaotrang {
+  from {
+    transform: rotate(-180deg) scale(0.2);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
