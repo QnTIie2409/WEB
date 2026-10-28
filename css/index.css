@@ -1,18 +1,13 @@
-/* =====================================================
-   index.css - RIÊNG cho trang intro (index.html)
-   ===================================================== */
 
-/* ===== 1. HERO (khung đúng 1 màn hình) ===== */
 .hero {
   position: relative;
-  height: 100vh; /* đúng một màn hình */
-  overflow: hidden; /* cái gì vượt khung thì bị cắt */
+  height: 100vh; 
+  overflow: hidden; 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Khi click logo: cả trang xoay, thu nhỏ, mờ dần */
 .hero.leaving {
   transition:
     transform 0.8s ease,
@@ -21,17 +16,15 @@
   opacity: 0;
 }
 
-/* Lúc rời trang thì tắt hiệu ứng hover của chữ và mây */
 .hero.leaving .logo-letter,
 .hero.leaving .deco {
   transform: none !important;
 }
 
-/* ===== 2. LỚP HỌA TIẾT (mây, sao) ===== */
 .decor {
   position: absolute;
   inset: 0;
-  pointer-events: none; /* chuột đi xuyên qua */
+  pointer-events: none;
   transition: transform 0.5s ease;
 }
 
@@ -43,7 +36,6 @@
     opacity 0.8s ease;
 }
 
-/* Vị trí từng họa tiết (số tạm, chỉnh dần) */
 .deco-2 { left: 500px;  top: 250px;  height: 130px; z-index: 10; }
 .deco-3 { left: 1170px; top: 480px;  height: 130px; z-index: 10; }
 .deco-4 { left: 570px;  top: 810px;  height: 130px; z-index: 10; }
@@ -52,7 +44,7 @@
 .deco-7 { left: 1300px; top: -300px; height: 800px; rotate: 15deg;  z-index: -11; }
 .deco-8 { left: 1280px; top: 250px;  height: 800px; rotate: -15deg; z-index: 9; }
 
-/* Rê chuột vào hero: họa tiết mờ và bay ra ngoài */
+/* Animation */
 .hero:hover .deco-2 { opacity: 0.2; transform: translate(-300px, -200px) rotate(-40deg); }
 .hero:hover .deco-3 { opacity: 0.2; transform: translate(300px, 100px) rotate(20deg); }
 .hero:hover .deco-5 { opacity: 0.1; transform: translate(-200px, -100px) rotate(-10deg); }
@@ -66,7 +58,6 @@
   position: relative;
 }
 
-/* "Sân khấu" cố định, 9 chữ đặt tuyệt đối bên trong */
 .logo-button {
   position: relative;
   display: block;
@@ -80,7 +71,6 @@
   transition: transform 0.5s ease;
 }
 
-/* Vị trí và lớp (z-index) của từng chữ */
 .logo-letter:nth-child(1) { left: 0;     top: 70px;  height: 320px; z-index: 8; }
 .logo-letter:nth-child(2) { left: 60px;  top: 165px; height: 280px; z-index: 10; }
 .logo-letter:nth-child(3) { left: 160px; top: 30px;  height: 280px; z-index: 5; }
@@ -91,7 +81,6 @@
 .logo-letter:nth-child(8) { left: 600px; top: 120px; height: 290px; z-index: 5; }
 .logo-letter:nth-child(9) { left: 650px; top: 70px;  height: 330px; z-index: 4; }
 
-/* Vùng đen nằm sau chữ */
 .logo-bg {
   position: absolute;
   left: -50px;
@@ -101,7 +90,7 @@
   z-index: -10;
 }
 
-/* Rê chuột vào logo: từng chữ bay tung ra */
+/* Animation */
 .logo-button:hover .logo-letter:nth-child(1) { transform: translate(-440px, -100px) rotate(-40deg); }
 .logo-button:hover .logo-letter:nth-child(2) { transform: translate(-250px, 250px) rotate(25deg); }
 .logo-button:hover .logo-letter:nth-child(3) { transform: translate(-250px, -250px) rotate(-62deg); }
